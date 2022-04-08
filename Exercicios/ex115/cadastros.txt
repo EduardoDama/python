@@ -1,0 +1,7 @@
+Eduardo;13
+Fernanda;46
+Margarida;76
+Milson;53
+Fernando;42
+Creuza;56
+nada;23

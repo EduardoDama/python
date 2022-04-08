@@ -1,0 +1,7 @@
+valor = float(input('Qual é o valor do produto?: R$ '))
+por = int(input('Quantos porcento de desconto / aumento: % '))
+calc1 = valor - (valor * por /100)
+calc2 = valor + (valor * por /100)
+print(f'o valor do produto é {valor}R$ a porcentagem foi de {por}%')
+print(f'A vista o desconto será de {calc1}R$')
+print(f'A prazo o aumento será de {calc2}R$')
