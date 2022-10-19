@@ -1,4 +1,5 @@
 from datetime import datetime
+from random import randint
 
 class Pessoa:
 
@@ -68,5 +69,17 @@ class Pessoa:
 
     def ano_nas(self):
         print(f'{self.nome} nasceu em {self.ano_atual - self.idade}') 
+
+
+
+    @classmethod
+    def por_ano_nas(cls, nome, ano_nas):
+        idade = cls.ano_atual - ano_nas
+        return cls(nome, idade)
+
+    @staticmethod
+    def gera_id():
+        rand = randint(1, 50)
+        return rand
         
         
