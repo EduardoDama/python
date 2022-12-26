@@ -3,7 +3,6 @@ from exer1 import Cidade
 
 
 with open('python POO/aula03/exercicio/classe.json') as my_json:
-    global arquivo
     arquivo = json.load(my_json)
 
 ci1 = Cidade(**arquivo[0])
