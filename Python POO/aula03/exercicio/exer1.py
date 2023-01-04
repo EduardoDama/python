@@ -12,9 +12,9 @@ ci3 = Cidade('Paris', 354, 'Mbappé')
 
 cidades = [vars(ci1), vars(ci2), vars(ci3)]  
 
-if __name__ == '__main__':
-    with open('python POO/aula03/exercicio/classe.json', 'w', encoding='utf-8') as my_json:
-        json.dump(cidades, my_json, indent=2)
+
+with open('python POO/aula03/exercicio/classe.json', 'w', encoding='utf-8') as my_json:
+    json.dump(cidades, my_json, indent=2)
 
 
 
