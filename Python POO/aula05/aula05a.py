@@ -2,7 +2,7 @@ class issoAi:
     def __init__(self):
         self.publico = 'Isso é público!'
         self._protected = 'isso é protegido'
-        self.__privet = ' Isso é privado'
+        self.__privet = ' Isso é privao'
 
     def publico(self):
         return 'Método publico'
