@@ -1,8 +1,8 @@
 class carro:
     def __init__(self, nome):
         self.nome = nome 
-        self.motor = []
-        self.frabricante = []
+        self.motor = None
+        self.frabricante = None
 
     @property
     def nomeCarro(self):
@@ -10,16 +10,16 @@ class carro:
 
 
     def InserirMotor(self, motorzão):
-        self.motor.append(motorzão.nome)
+        self.motor = motorzão.nome
 
 
     def inserirFabricante(self, tycoon):
-        self.frabricante.append(tycoon.nome)
+        self.frabricante = tycoon.nome
 
     def mostrar(self):
-        print('-='*30)
+
         print(f'{self.nome}: tem o motor {self.motor} e é da frabricante {self.frabricante}')
-        print('-='*30)
+
 
 
 class motor:
@@ -29,6 +29,8 @@ class motor:
 class fabricante:
     def __init__(self, nome):
         self.nome = nome
+
+
 
 carro1 = carro('Celta')
 
@@ -40,5 +42,20 @@ carro1.InserirMotor(motor1)
 
 carro1.inserirFabricante(fabricante1)
 
+
+
+carro2 = carro('Ferrari')
+
+
+
+fabricante2 = fabricante('Ferrari')
+
+motor2 = motor('biturbão Ferrari')
+
+carro2.inserirFabricante(fabricante2)
+carro2.InserirMotor(motor2)
+
+
 carro1.mostrar()
 
+carro2.mostrar()
