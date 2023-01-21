@@ -17,4 +17,3 @@ c1 = Cliente('Eduardo', 14)
 
 c1.fala_classe_name()
 
-help(Pessoa)
