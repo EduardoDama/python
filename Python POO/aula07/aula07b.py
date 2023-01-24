@@ -43,6 +43,7 @@ print(c.outra)
 print(c.atributo_a)
 
 print(C.mro())
+
 '''print(c.metodo())
 print(C.mro())
 print(B.mro())
