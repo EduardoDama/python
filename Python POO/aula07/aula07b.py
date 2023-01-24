@@ -8,7 +8,7 @@ stringer = string('Oláaaaaaaaaaa')
 
 print(stringer.upper())'''
 
-class A: #Apenas atributos de A
+class A(object): #Apenas atributos de A
     atributo_a = 'Valor A'
 
     def __init__(self, atributo):
@@ -40,9 +40,9 @@ class C(B): #Atributos de A de B e C
 c = C('Atributo', 'outra coisa')
 print(c.atributo)
 print(c.outra)
+print(c.atributo_a)
 
-
-
+print(C.mro())
 '''print(c.metodo())
 print(C.mro())
 print(B.mro())
