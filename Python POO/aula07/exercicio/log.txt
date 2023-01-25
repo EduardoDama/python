@@ -1,0 +1,5 @@
+SUCESSO: Ligando g52 (Celular)
+SUCESSO: Ligando iPhone (Celular)
+SUCESSO: Ligando g52 (Celular)
+SUCESSO: Ligando iPhone (Celular)
+ERRO: Desligando g52 (Celular)
