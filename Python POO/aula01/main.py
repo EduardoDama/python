@@ -1,8 +1,36 @@
-from pessoa import Pessoa
+class produto:
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+
+    def desconto(self, porcentual):
+        self.preco = self.preco - (self.preco * (porcentual / 100))
+        print(self.preco)
+
+    @property
+    def nome(self):
+        return self._nome
+
+    @nome.setter
+    def nome(self, name):
+        self._nome = name.title()
 
 
-p1 = Pessoa.por_ano_nas('eduardo', 2008)
 
-print(p1.nome, p1.idade)
+    #getter
+    @property
+    def preco(self):
+        return self._preco
 
-print('ID:', p1.gera_id())
+    #setter
+    @preco.setter
+    def preco(self, valor):
+        if isinstance(valor, str):
+            valor = float(valor.replace('R$', ''))
+            
+        self._preco = valor
+
+p = produto('COMPUTADOR', 'R$95') 
+p.desconto(10)
+
+print(p.nome)
