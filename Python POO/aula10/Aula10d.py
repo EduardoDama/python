@@ -15,5 +15,4 @@ class Multiplicar: #Classe decoradora
 @Multiplicar(9) #Decorator
 def somar(x, z):
     return x + z
-S
 print(somar(3, 9))
