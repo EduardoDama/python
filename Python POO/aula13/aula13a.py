@@ -1,4 +1,3 @@
-
 from enum import Enum, auto
 
 class directions(Enum):
@@ -14,3 +13,4 @@ def move(directionPlayer: directions):
 
 move(directions.Right)
 move(directions(2))
+
