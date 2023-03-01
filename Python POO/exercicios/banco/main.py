@@ -44,6 +44,7 @@ class contaCorrente(conta):
     def sacar(self):
         print('Sacando...')
         valor = int(input('Qual valor a ser retirado? '))
+
         if valor > 2500:
             print('Não se pode tirar um valor acima de 2500$')
         else:
@@ -92,9 +93,9 @@ class banco:
 conC = contaCorrente(123, 809, 0)
 conP = contaPoupança(123, 809, 0)
 
-conP.depositar()
-
-conP.sacar()
 p1 = Cliente('Eduardo', 15, conP)
+
+banco(p1, conP)
+
 
 
