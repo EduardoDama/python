@@ -18,7 +18,6 @@ class contaPoupança(conta):
     def __init_subclass__(cls) -> None:
         return super().__init_subclass__()
     def sacar(self):
-        print('Sacando...')
         valor = int(input('Qual valor a ser retirado? '))
         if valor > 1000:
             print('Não se pode tirar um valor acima de 1000$')
@@ -42,7 +41,6 @@ class contaCorrente(conta):
         return super().__init_subclass__()
     
     def sacar(self):
-        print('Sacando...')
         valor = int(input('Qual valor a ser retirado? '))
 
         if valor > 2500:
@@ -86,16 +84,34 @@ class Cliente(pessoa):
         
     
 class banco:
-    def __init__(self, cliente, conta):
+    def __init__(self, cliente):
         self.cliente = cliente
-        self.conto = conta
+        self._agencias = [159357, 258456, 268431, 416896]
+        self._clientes = ['Eduardo', 'Galinzé', 'Chupas', 'Coranto']
+        self._numero = [2165456, 6561651, 7564656, 1191662]
 
-conC = contaCorrente(123, 809, 0)
-conP = contaPoupança(123, 809, 0)
+    def sacar(self):
+        dadosConta = self.cliente.conta.__dict__
+        if dadosConta['num'] in self._numero:
+            if dadosConta['agen'] in self._agencias:
+                if self.cliente.nome in self._clientes:
+                    self.cliente.conta.sacar()
+        else:
+            print('dados errados')
 
-p1 = Cliente('Eduardo', 15, conP)
+    def depositar(self):
+        self.cliente.conta.depositar()
 
-banco(p1, conP)
+
+conta1 = contaCorrente(2165456, 159357, 1000)
+cl1 = Cliente('Eduardo', 15, conta1)
+
+bank1 = banco(cl1)
+
+bank1.sacar()
+
+bank1.depositar()
+
 
 
 
