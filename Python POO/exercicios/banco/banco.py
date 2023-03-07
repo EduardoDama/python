@@ -29,5 +29,3 @@ class banco:
     def autenticar(self, v):
         return self.Verificar_agencia(v) and self.Verificar_cliente(v) and self.Verificar_numero(v)
         
-    def depositar(self):
-        self.cliente.conta.depositar()

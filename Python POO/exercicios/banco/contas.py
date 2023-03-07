@@ -6,14 +6,14 @@ class conta(ABC):
         self.sald = sald
 
     @abstractmethod
-    def sacar(self, valor):
-        print(f'sacando, {valor}R$')
+    def sacar(self, valor, numC):
+        print(f'sacando na conta {numC} o valor de {valor}R$')
         print(f'Valor no banco é {self.sald}R$')
         print('-='*20)
 
     @abstractmethod
-    def depositar(self, valor):
-        print(f'despositando, {valor}R$')
+    def depositar(self, valor, numC):
+        print(f'despositando na conta {numC} o valor de {valor}R$')
         print(f'Valor no banco é {self.sald}R$')
         print('-='*20)
 
@@ -21,38 +21,38 @@ class contaPoupança(conta):
     def __init_subclass__(cls) -> None:
         return super().__init_subclass__()
     
-    def sacar(self, valor):
+    def sacar(self, valor, numC):
         if valor > 1000:
             print('Não se pode tirar um valor acima de 1000$')
         else:
             self.sald -= valor
-            super().sacar(valor)
+            super().sacar(valor, numC)
 
-    def depositar(self, valor):
+    def depositar(self, valor, numC):
         if valor > 2000:
             print('Não se pode colocar um valor acima de 2000R$')
         else:
             self.sald += valor
-            super().depositar(valor)
+            super().depositar(valor, numC)
             
 
 class contaCorrente(conta):
     def __init_subclass__(cls) -> None:
         return super().__init_subclass__()
     
-    def sacar(self, valor):
+    def sacar(self, valor, numC):
         if valor > 2500:
             print('Não se pode tirar um valor acima de 2500$')
         else:
             self.sald -= valor
-            super().sacar(valor)
+            super().sacar(valor, numC)
 
-    def depositar(self, valor):
+    def depositar(self, valor, numC):
         if valor > 8000:
             print('Não se pode colocar um valor acima de 8000$')
         else:
             self.sald += valor
-            super().depositar(valor)
+            super().depositar(valor, numC)
 
 
 
