@@ -1,8 +1,8 @@
 class banco:
     def __init__(self):
-        self._agencias = sorted([159357, 258456, 268431, 416896])
-        self._clientes = sorted(['Eduardo', 'Galinzé', 'Chupas', 'Coranto'])
-        self._numero = sorted([2165456, 6561651, 7564656, 1191662])
+        self._agencias = [159357, 258456, 268431, 416896]
+        self._clientes = ['Eduardo', 'Galinzé', 'Chupas', 'Coranto']
+        self._numero = [2165456, 6561651, 7564656, 1191662]
         self.agencias = []
         self.numero = []
         self.nomesClientes = []
