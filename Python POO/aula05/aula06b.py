@@ -17,7 +17,7 @@ class carrinhoCompras:
         print('-='*20)
 
 class produto:
-    def __init__(self, nome, preco) -> None:
+    def __init__(self, nome, preco) -> None: #Assinatura do método, parâmetros e returno
         self.nome = nome
         self.preco = preco
 
