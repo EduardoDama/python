@@ -15,3 +15,5 @@ print('Ano de nascimento:', anoNas)
 print('É maior de idade?', maiorIdade)
 print('Altura em metros:', altura)
 print('-='*20)
+
+print('Saindo programa...')
